@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace csharp_Assignment4
+namespace CSharp_Assignment4
 {
     internal static class Program
     {

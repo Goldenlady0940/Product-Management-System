@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace csharp_Assignment4.Properties
+namespace CSharp_Assignment4.Properties
 {
 
 

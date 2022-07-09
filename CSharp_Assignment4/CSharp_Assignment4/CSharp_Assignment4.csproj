@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D83E026-B869-43AF-B8F3-016CCBD3D132}</ProjectGuid>
+    <ProjectGuid>{E630C7C8-B3BB-4087-BB8D-7BF859EA52C4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>csharp_Assignment4</RootNamespace>
-    <AssemblyName>csharp-Assignment4</AssemblyName>
+    <RootNamespace>CSharp_Assignment4</RootNamespace>
+    <AssemblyName>CSharp_Assignment4</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,9 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
