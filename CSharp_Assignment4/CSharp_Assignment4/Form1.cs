@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace CSharp_Assignment4
 {
@@ -17,20 +18,73 @@ namespace CSharp_Assignment4
             InitializeComponent();
         }
 
-        private void btn_Add_Click(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e,)
         {
-            Product p = new Product
+            Regex re = new Regex(@"^[0 - 9]{ 3 } - [0 - 9]{3}$");
+            //1st
+            // string  name = txt_name.Text;
+            // MessageBox.Show("Hello " + name);
+            //2nd
+            // string msg = "hello" + txt_Number.Text;
+            //MessageBox.Show(msg);
+            //3rd
+            //concatination endaybeza use below
+            //.Show ($"hello {txt_Number.Text} how u doing");
+            if (string.IsNullOrEmpty(txt_Number.Text))
             {
+                errorProvider1.SetError(txt_Number, "Number required");
+                //MessageBox.Show("Please enter Number");
+            }
+            else if (string.IsNullOrEmpty(txt_Inventory.Text))
+            {
+                errorProvider1.SetError(txt_Inventory, "Number required");
+                //MessageBox.Show("Please enter Inventroy Number");
+            }
+            else if (string.IsNullOrEmpty(txt_Object.Text))
+            {
+                errorProvider1.SetError(txt_Object, "Object Name required");
+                //MessageBox.Show("Please enter Object name");
+            }
+            else if (string.IsNullOrEmpty(txt_Count.Text))
+            {
+                errorProvider1.SetError(txt_Count, "Count required");
+                //MessageBox.Show("Please enter Count");
+            }
+            else if (string.IsNullOrEmpty(txt_Price.Text))
+            {
+                errorProvider1.SetError(txt_Price, "Price required");
+                //MessageBox.Show("Please enter Price");
+            }
+            else if (!re.IsMatch(txt_Price.Text))
+            {
+                errorProvider1.SetError(txt_Price, "Price formate error");
+            }
+            else
+                errorProvider1.Clear();
+            try
+            {
+                Product p = new Product
+                {
 
-                Number = int.Parse(txt_Number.Text),
-                Date = DatePicker1.Value,
-                Inventory_Number = int.Parse(txt_Number.Text),
-                Object_name = txt_Object.Text,
-                Count = int.Parse(txt_Count.Text),
-                Price = int.Parse(txt_Price.Text)
+                    Number = int.Parse(txt_Number.Text),
+                    Date = DatePicker1.Value,
+                    Inventory_Number = int.Parse(txt_Number.Text),
+                    Object_Name = txt_Object.Text,
+                    Count = int.Parse(txt_Count.Text),
+                    Price = int.Parse(txt_Price.Text)
+                };
+                p.save();
+                DataGridView.DataSource = null;
+                DataGridView.DataSource = Product.GetAllProduct(); //takes the data to be provided
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
             };
+            
 
-            p.save();
+            
         }
     }
 }
