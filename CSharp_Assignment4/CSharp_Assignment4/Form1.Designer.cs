@@ -51,8 +51,15 @@
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbl_User = new System.Windows.Forms.Label();
+            this.group_Gender = new System.Windows.Forms.GroupBox();
+            this.check_Availability = new System.Windows.Forms.CheckBox();
+            this.rad_Male = new System.Windows.Forms.RadioButton();
+            this.rad_Female = new System.Windows.Forms.RadioButton();
+            this.check_List = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.group_Gender.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Number
@@ -165,7 +172,6 @@
             this.btn_Add.TabIndex = 13;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
-            //this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Cancel
             // 
@@ -225,11 +231,79 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lbl_User
+            // 
+            this.lbl_User.AutoSize = true;
+            this.lbl_User.Location = new System.Drawing.Point(881, 44);
+            this.lbl_User.Name = "lbl_User";
+            this.lbl_User.Size = new System.Drawing.Size(29, 13);
+            this.lbl_User.TabIndex = 17;
+            this.lbl_User.Text = "User";
+            // 
+            // group_Gender
+            // 
+            this.group_Gender.Controls.Add(this.rad_Female);
+            this.group_Gender.Controls.Add(this.rad_Male);
+            this.group_Gender.Location = new System.Drawing.Point(635, 97);
+            this.group_Gender.Name = "group_Gender";
+            this.group_Gender.Size = new System.Drawing.Size(200, 100);
+            this.group_Gender.TabIndex = 18;
+            this.group_Gender.TabStop = false;
+            this.group_Gender.Text = "Gender";
+            // 
+            // check_Availability
+            // 
+            this.check_Availability.AutoSize = true;
+            this.check_Availability.Location = new System.Drawing.Point(694, 256);
+            this.check_Availability.Name = "check_Availability";
+            this.check_Availability.Size = new System.Drawing.Size(75, 17);
+            this.check_Availability.TabIndex = 19;
+            this.check_Availability.Text = "Availability";
+            this.check_Availability.UseVisualStyleBackColor = true;
+            // 
+            // rad_Male
+            // 
+            this.rad_Male.AutoSize = true;
+            this.rad_Male.Location = new System.Drawing.Point(19, 28);
+            this.rad_Male.Name = "rad_Male";
+            this.rad_Male.Size = new System.Drawing.Size(48, 17);
+            this.rad_Male.TabIndex = 0;
+            this.rad_Male.TabStop = true;
+            this.rad_Male.Text = "Male";
+            this.rad_Male.UseVisualStyleBackColor = true;
+            // 
+            // rad_Female
+            // 
+            this.rad_Female.AutoSize = true;
+            this.rad_Female.Location = new System.Drawing.Point(19, 52);
+            this.rad_Female.Name = "rad_Female";
+            this.rad_Female.Size = new System.Drawing.Size(59, 17);
+            this.rad_Female.TabIndex = 1;
+            this.rad_Female.TabStop = true;
+            this.rad_Female.Text = "Female";
+            this.rad_Female.UseVisualStyleBackColor = true;
+            // 
+            // check_List
+            // 
+            this.check_List.FormattingEnabled = true;
+            this.check_List.Items.AddRange(new object[] {
+            "Product",
+            "Ice",
+            "Water"});
+            this.check_List.Location = new System.Drawing.Point(493, 210);
+            this.check_List.Name = "check_List";
+            this.check_List.Size = new System.Drawing.Size(120, 94);
+            this.check_List.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 469);
+            this.Controls.Add(this.check_List);
+            this.Controls.Add(this.check_Availability);
+            this.Controls.Add(this.group_Gender);
+            this.Controls.Add(this.lbl_User);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
@@ -249,6 +323,8 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.group_Gender.ResumeLayout(false);
+            this.group_Gender.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +354,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Count;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckedListBox check_List;
+        private System.Windows.Forms.CheckBox check_Availability;
+        private System.Windows.Forms.GroupBox group_Gender;
+        private System.Windows.Forms.RadioButton rad_Female;
+        private System.Windows.Forms.RadioButton rad_Male;
+        private System.Windows.Forms.Label lbl_User;
     }
 }
 

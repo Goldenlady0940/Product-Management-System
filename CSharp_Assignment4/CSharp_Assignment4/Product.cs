@@ -22,12 +22,15 @@ namespace CSharp_Assignment4
         public int Count { get; set; }
 
         public double Price { get; set; }
+        public bool isAvailable { get; set; }
+        public bool rad_Female { get; set; }
+        public bool rad_Male { get; set; }
         public void save()
         {
             Products.Add(this);
             //MessageBox.Show("Saved Successfully");
         }
-        public static List<Product> GetAllProduct()
+        static public List<Product> GetAllProduct()
         {
             return Products;
         }

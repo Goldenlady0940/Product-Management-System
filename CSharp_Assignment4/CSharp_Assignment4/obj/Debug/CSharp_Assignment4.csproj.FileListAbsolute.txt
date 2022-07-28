@@ -9,3 +9,4 @@ C:\Users\hp\Documents\GitHub\lab projects\CS223\CSharp_Assignment4\CSharp_Assign
 C:\Users\hp\Documents\GitHub\lab projects\CS223\CSharp_Assignment4\CSharp_Assignment4\obj\Debug\CSharp_Assignment4.csproj.CoreCompileInputs.cache
 C:\Users\hp\Documents\GitHub\lab projects\CS223\CSharp_Assignment4\CSharp_Assignment4\obj\Debug\CSharp_Assignment4.exe
 C:\Users\hp\Documents\GitHub\lab projects\CS223\CSharp_Assignment4\CSharp_Assignment4\obj\Debug\CSharp_Assignment4.pdb
+C:\Users\hp\Documents\GitHub\lab projects\CS223\CSharp_Assignment4\CSharp_Assignment4\obj\Debug\CSharp_Assignment4.Login.resources
