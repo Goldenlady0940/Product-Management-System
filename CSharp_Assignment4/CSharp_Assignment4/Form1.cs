@@ -18,10 +18,10 @@ namespace CSharp_Assignment4
 {
     public partial class Form1 : Form
     {
-        public Form1(string Name)
+        public Form1(/*string Name*/)
         {
             InitializeComponent();
-            lbl_User.Text = Name;  
+            //lbl_User.Text = Name;  
         }
 
         private void btn_Add_Click(object sender, EventArgs e)

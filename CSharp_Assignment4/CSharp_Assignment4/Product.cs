@@ -30,6 +30,11 @@ namespace CSharp_Assignment4
             Products.Add(this);
             //MessageBox.Show("Saved Successfully");
         }
+        public static Product findOne(string name)
+        {
+            return Products.Find(p => p.Object_Name == name); // arrow function
+        }
+ 
         static public List<Product> GetAllProduct()
         {
             return Products;

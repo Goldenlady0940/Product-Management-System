@@ -10,26 +10,24 @@ using System.Windows.Forms;
 
 namespace CSharp_Assignment4
 {
-    public partial class Login : Form
+    public partial class Search : Form
     {
-        public Login()
+        public Search()
         {
             InitializeComponent();
         }
 
-        private void btn_Login_Click(object sender, EventArgs e)
+        private void lbl_Search_Click(object sender, EventArgs e)
         {
-            if (txt_User_Name.Text == "Admin" && txt_Password.Text == "Admin")
+            var Products = Product.findOne(txt_Search.Text);
+            if (Products == null)
             {
-                Form1 screen = new Form1(/*txt_User_Name.Text*/);
-                screen.Show();
-                this.Hide();
+                MessageBox.Show("not found");
             }
             else
             {
-                MessageBox.Show("Invalid");
+                Product.findOne(Products.Object_Name);
             }
-            
         }
     }
 }

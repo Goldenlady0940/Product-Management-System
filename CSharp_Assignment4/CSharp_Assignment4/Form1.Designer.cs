@@ -43,7 +43,7 @@
             this.DatePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGridView = new System.Windows.Forms.DataGridView();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inventory_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,11 +53,11 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbl_User = new System.Windows.Forms.Label();
             this.group_Gender = new System.Windows.Forms.GroupBox();
-            this.check_Availability = new System.Windows.Forms.CheckBox();
-            this.rad_Male = new System.Windows.Forms.RadioButton();
             this.rad_Female = new System.Windows.Forms.RadioButton();
+            this.rad_Male = new System.Windows.Forms.RadioButton();
+            this.check_Availability = new System.Windows.Forms.CheckBox();
             this.check_List = new System.Windows.Forms.CheckedListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.group_Gender.SuspendLayout();
             this.SuspendLayout();
@@ -182,20 +182,20 @@
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Number,
             this.Date,
             this.Inventory_Number,
             this.Object,
             this.Count,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 318);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 150);
-            this.dataGridView1.TabIndex = 16;
+            this.DataGridView.Location = new System.Drawing.Point(2, 318);
+            this.DataGridView.Name = "DataGridView";
+            this.DataGridView.Size = new System.Drawing.Size(644, 150);
+            this.DataGridView.TabIndex = 16;
             // 
             // Number
             // 
@@ -251,15 +251,16 @@
             this.group_Gender.TabStop = false;
             this.group_Gender.Text = "Gender";
             // 
-            // check_Availability
+            // rad_Female
             // 
-            this.check_Availability.AutoSize = true;
-            this.check_Availability.Location = new System.Drawing.Point(694, 256);
-            this.check_Availability.Name = "check_Availability";
-            this.check_Availability.Size = new System.Drawing.Size(75, 17);
-            this.check_Availability.TabIndex = 19;
-            this.check_Availability.Text = "Availability";
-            this.check_Availability.UseVisualStyleBackColor = true;
+            this.rad_Female.AutoSize = true;
+            this.rad_Female.Location = new System.Drawing.Point(19, 52);
+            this.rad_Female.Name = "rad_Female";
+            this.rad_Female.Size = new System.Drawing.Size(59, 17);
+            this.rad_Female.TabIndex = 1;
+            this.rad_Female.TabStop = true;
+            this.rad_Female.Text = "Female";
+            this.rad_Female.UseVisualStyleBackColor = true;
             // 
             // rad_Male
             // 
@@ -272,16 +273,15 @@
             this.rad_Male.Text = "Male";
             this.rad_Male.UseVisualStyleBackColor = true;
             // 
-            // rad_Female
+            // check_Availability
             // 
-            this.rad_Female.AutoSize = true;
-            this.rad_Female.Location = new System.Drawing.Point(19, 52);
-            this.rad_Female.Name = "rad_Female";
-            this.rad_Female.Size = new System.Drawing.Size(59, 17);
-            this.rad_Female.TabIndex = 1;
-            this.rad_Female.TabStop = true;
-            this.rad_Female.Text = "Female";
-            this.rad_Female.UseVisualStyleBackColor = true;
+            this.check_Availability.AutoSize = true;
+            this.check_Availability.Location = new System.Drawing.Point(694, 256);
+            this.check_Availability.Name = "check_Availability";
+            this.check_Availability.Size = new System.Drawing.Size(75, 17);
+            this.check_Availability.TabIndex = 19;
+            this.check_Availability.Text = "Availability";
+            this.check_Availability.UseVisualStyleBackColor = true;
             // 
             // check_List
             // 
@@ -304,7 +304,7 @@
             this.Controls.Add(this.check_Availability);
             this.Controls.Add(this.group_Gender);
             this.Controls.Add(this.lbl_User);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGridView);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.DatePicker1);
@@ -319,9 +319,11 @@
             this.Controls.Add(this.lbl_Inventory);
             this.Controls.Add(this.lbl_Date);
             this.Controls.Add(this.lbl_Number);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.group_Gender.ResumeLayout(false);
             this.group_Gender.PerformLayout();
@@ -346,7 +348,7 @@
         private System.Windows.Forms.DateTimePicker DatePicker1;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Inventory_Number;
