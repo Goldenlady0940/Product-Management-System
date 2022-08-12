@@ -23,10 +23,9 @@ namespace CSharp_Assignment4
             InitializeComponent();
             //lbl_User.Text = Name;  
         }
-
-        private void btn_Add_Click(object sender, EventArgs e)
+        private void btn_Add_Click_1(object sender, EventArgs e)
         {
-            Regex re = new Regex(@"^[0 - 9]{ 3 } - [0 - 9]{3}$");
+            //Regex re = new Regex(@"^[0 - 9]{ 3 } - [0 - 9]{3}$");
             //1st
             // string  name = txt_name.Text;
             // MessageBox.Show("Hello " + name);
@@ -61,13 +60,14 @@ namespace CSharp_Assignment4
                 errorProvider1.SetError(txt_Price, "Price required");
                 //MessageBox.Show("Please enter Price");
             }
-            else if (!re.IsMatch(txt_Price.Text))
+           /* else if (!re.IsMatch(txt_Price.Text))
             {
                 errorProvider1.SetError(txt_Price, "Price formate error");
-            }
+            }*/
             else
-            {  
-                errorProvider1.Clear();
+            {
+               // errorProvider1.Clear();
+
                 try
                 {
                     Product p = new Product
@@ -80,9 +80,10 @@ namespace CSharp_Assignment4
                         Count = int.Parse(txt_Count.Text),
                         Price = int.Parse(txt_Price.Text),
                         isAvailable = check_Availability.Checked,
-                        rad_Female = rad_Female.Checked,
-                        rad_Male = rad_Male.Checked
+                        rad_NonPlastic = rad_NonPlastic.Checked,
+                        rad_Plastic = rad_Plastic.Checked
                     };
+
                     p.save();
                     DataGridView.DataSource = null;
                     DataGridView.DataSource = Product.GetAllProduct(); //takes the data to be provided
@@ -99,10 +100,10 @@ namespace CSharp_Assignment4
                     MessageBox.Show("Error");
                 };
             }
-               
-            
 
-            
+
+
+
         }
     }
 }

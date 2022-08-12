@@ -23,19 +23,21 @@ namespace CSharp_Assignment4
 
         public double Price { get; set; }
         public bool isAvailable { get; set; }
-        public bool rad_Female { get; set; }
-        public bool rad_Male { get; set; }
+        public bool rad_Plastic { get; set; }
+        public bool rad_NonPlastic { get; set; }
+
+       
+        public static Product findOne(string name)//for search
+        {
+            return Products.Find(p => p.Object_Name == name); // arrow function
+        }
+
         public void save()
         {
             Products.Add(this);
             //MessageBox.Show("Saved Successfully");
         }
-        public static Product findOne(string name)
-        {
-            return Products.Find(p => p.Object_Name == name); // arrow function
-        }
- 
-        static public List<Product> GetAllProduct()
+        public static List<Product> GetAllProduct()
         {
             return Products;
         }

@@ -26,8 +26,27 @@ namespace CSharp_Assignment4
             }
             else
             {
+                MessageBox.Show("Found");
                 Product.findOne(Products.Object_Name);
             }
         }
+
+        private void Search_Load(object sender, EventArgs e)
+        {
+
+            flowLayoutPanel1.Controls.Clear();
+            foreach (var item in Product.GetAllProduct())
+            {
+                ProductCard pro = new ProductCard();
+                pro.Product_Name = item.Object_Name;
+                pro.Product_Inventory = item.Inventory_Number;
+                pro.Count = item.Count;
+                pro.Price = item.Price;
+
+                flowLayoutPanel1.Controls.Add(pro);
+            }
+        }
+
+       
     }
 }

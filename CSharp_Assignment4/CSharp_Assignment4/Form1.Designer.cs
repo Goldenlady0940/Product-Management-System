@@ -44,22 +44,16 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inventory_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Object = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbl_User = new System.Windows.Forms.Label();
-            this.group_Gender = new System.Windows.Forms.GroupBox();
-            this.rad_Female = new System.Windows.Forms.RadioButton();
-            this.rad_Male = new System.Windows.Forms.RadioButton();
+            this.group_Quality = new System.Windows.Forms.GroupBox();
+            this.rad_NonPlastic = new System.Windows.Forms.RadioButton();
+            this.rad_Plastic = new System.Windows.Forms.RadioButton();
             this.check_Availability = new System.Windows.Forms.CheckBox();
             this.check_List = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.group_Gender.SuspendLayout();
+            this.group_Quality.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Number
@@ -172,6 +166,7 @@
             this.btn_Add.TabIndex = 13;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click_1);
             // 
             // btn_Cancel
             // 
@@ -185,47 +180,10 @@
             // DataGridView
             // 
             this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Number,
-            this.Date,
-            this.Inventory_Number,
-            this.Object,
-            this.Count,
-            this.Price});
             this.DataGridView.Location = new System.Drawing.Point(2, 318);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.Size = new System.Drawing.Size(644, 150);
             this.DataGridView.TabIndex = 16;
-            // 
-            // Number
-            // 
-            this.Number.HeaderText = "Number";
-            this.Number.Name = "Number";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            // 
-            // Inventory_Number
-            // 
-            this.Inventory_Number.HeaderText = "Inventory Number";
-            this.Inventory_Number.Name = "Inventory_Number";
-            // 
-            // Object
-            // 
-            this.Object.HeaderText = "Object Name";
-            this.Object.Name = "Object";
-            // 
-            // Count
-            // 
-            this.Count.HeaderText = "Count";
-            this.Count.Name = "Count";
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
             // 
             // errorProvider1
             // 
@@ -240,38 +198,38 @@
             this.lbl_User.TabIndex = 17;
             this.lbl_User.Text = "User";
             // 
-            // group_Gender
+            // group_Quality
             // 
-            this.group_Gender.Controls.Add(this.rad_Female);
-            this.group_Gender.Controls.Add(this.rad_Male);
-            this.group_Gender.Location = new System.Drawing.Point(635, 97);
-            this.group_Gender.Name = "group_Gender";
-            this.group_Gender.Size = new System.Drawing.Size(200, 100);
-            this.group_Gender.TabIndex = 18;
-            this.group_Gender.TabStop = false;
-            this.group_Gender.Text = "Gender";
+            this.group_Quality.Controls.Add(this.rad_NonPlastic);
+            this.group_Quality.Controls.Add(this.rad_Plastic);
+            this.group_Quality.Location = new System.Drawing.Point(635, 97);
+            this.group_Quality.Name = "group_Quality";
+            this.group_Quality.Size = new System.Drawing.Size(200, 100);
+            this.group_Quality.TabIndex = 18;
+            this.group_Quality.TabStop = false;
+            this.group_Quality.Text = "Quality";
             // 
-            // rad_Female
+            // rad_NonPlastic
             // 
-            this.rad_Female.AutoSize = true;
-            this.rad_Female.Location = new System.Drawing.Point(19, 52);
-            this.rad_Female.Name = "rad_Female";
-            this.rad_Female.Size = new System.Drawing.Size(59, 17);
-            this.rad_Female.TabIndex = 1;
-            this.rad_Female.TabStop = true;
-            this.rad_Female.Text = "Female";
-            this.rad_Female.UseVisualStyleBackColor = true;
+            this.rad_NonPlastic.AutoSize = true;
+            this.rad_NonPlastic.Location = new System.Drawing.Point(19, 52);
+            this.rad_NonPlastic.Name = "rad_NonPlastic";
+            this.rad_NonPlastic.Size = new System.Drawing.Size(79, 17);
+            this.rad_NonPlastic.TabIndex = 1;
+            this.rad_NonPlastic.TabStop = true;
+            this.rad_NonPlastic.Text = "Non Plastic";
+            this.rad_NonPlastic.UseVisualStyleBackColor = true;
             // 
-            // rad_Male
+            // rad_Plastic
             // 
-            this.rad_Male.AutoSize = true;
-            this.rad_Male.Location = new System.Drawing.Point(19, 28);
-            this.rad_Male.Name = "rad_Male";
-            this.rad_Male.Size = new System.Drawing.Size(48, 17);
-            this.rad_Male.TabIndex = 0;
-            this.rad_Male.TabStop = true;
-            this.rad_Male.Text = "Male";
-            this.rad_Male.UseVisualStyleBackColor = true;
+            this.rad_Plastic.AutoSize = true;
+            this.rad_Plastic.Location = new System.Drawing.Point(19, 28);
+            this.rad_Plastic.Name = "rad_Plastic";
+            this.rad_Plastic.Size = new System.Drawing.Size(56, 17);
+            this.rad_Plastic.TabIndex = 0;
+            this.rad_Plastic.TabStop = true;
+            this.rad_Plastic.Text = "Plastic";
+            this.rad_Plastic.UseVisualStyleBackColor = true;
             // 
             // check_Availability
             // 
@@ -302,7 +260,7 @@
             this.ClientSize = new System.Drawing.Size(966, 469);
             this.Controls.Add(this.check_List);
             this.Controls.Add(this.check_Availability);
-            this.Controls.Add(this.group_Gender);
+            this.Controls.Add(this.group_Quality);
             this.Controls.Add(this.lbl_User);
             this.Controls.Add(this.DataGridView);
             this.Controls.Add(this.btn_Cancel);
@@ -325,8 +283,8 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.group_Gender.ResumeLayout(false);
-            this.group_Gender.PerformLayout();
+            this.group_Quality.ResumeLayout(false);
+            this.group_Quality.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,18 +307,12 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.DataGridView DataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Inventory_Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Object;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.CheckedListBox check_List;
         private System.Windows.Forms.CheckBox check_Availability;
-        private System.Windows.Forms.GroupBox group_Gender;
-        private System.Windows.Forms.RadioButton rad_Female;
-        private System.Windows.Forms.RadioButton rad_Male;
+        private System.Windows.Forms.GroupBox group_Quality;
+        private System.Windows.Forms.RadioButton rad_NonPlastic;
+        private System.Windows.Forms.RadioButton rad_Plastic;
         private System.Windows.Forms.Label lbl_User;
     }
 }
