@@ -43,6 +43,11 @@ namespace CSharp_Assignment4
                 pro.Count = item.Count;
                 pro.Price = item.Price;
 
+                pro.Click += (object P, EventArgs e2) =>
+                {
+                    Product_Detail pd = new Product_Detail(item.Object_Name, item.Inventory_Number, item.Count, item.Price, item.Date, item.Number);
+                    pd.Show();
+                };
                 flowLayoutPanel1.Controls.Add(pro);
             }
         }
