@@ -80,7 +80,6 @@ namespace CSharp_Assignment4
                         Count = int.Parse(txt_Count.Text),
                         Price = int.Parse(txt_Price.Text),
                         isAvailable = check_Availability.Checked,
-                        rad_NonPlastic = rad_NonPlastic.Checked,
                         rad_Plastic = rad_Plastic.Checked
                     };
 
@@ -93,11 +92,11 @@ namespace CSharp_Assignment4
                     {
                         checkedItems += item.ToString() + " ";
                     }
-                    MessageBox.Show(checkedItems);
+                    //MessageBox.Show(checkedItems);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Error");
+                    MessageBox.Show(ex.Message);
                 };
             }
 
