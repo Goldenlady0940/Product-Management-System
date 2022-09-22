@@ -1,6 +1,6 @@
 ﻿namespace CSharp_Assignment4
 {
-    partial class ProductCard
+    partial class UCProductCard
     {
         /// <summary> 
         /// Required designer variable.

@@ -16,7 +16,7 @@ namespace CSharp_Assignment4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindows());
+            Application.Run(new Login());
         }
     }
 }

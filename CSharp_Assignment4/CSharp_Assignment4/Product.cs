@@ -28,17 +28,18 @@ namespace CSharp_Assignment4
         public bool rad_Plastic { get; set; }
         public bool rad_NonPlastic { get; set; }
 
-       
+
         public static Product findOne(string name)//for search
         {
-            return Products.Find(p => p.Object_Name == name); // arrow function
+            List<Product> list = GetAllProduct();
+            return list.Find(Pro => Pro.Object_Name == name);
         }
        
         public void save()
         {
             SqlConnection con = new SqlConnection(connection);
             con.Open();
-             string Query = "INSERT INTO PRODUCT VALUES (@ID,@DATE,@INV_NUM,@NAME,@COUNT,@PRICE,@AVAIL,@PLASTIC);";//this.Productname
+             string Query = "INSERT INTO PRODUCT VALUES (@ID,@DATE,@INV_NUM,@NAME,@COUNT,@PRICE,@AVAIL,@PLASTIC);";
              SqlCommand cmd = new SqlCommand(Query, con);
             cmd.Parameters.AddWithValue("@ID", this.Number);
             cmd.Parameters.AddWithValue("@DATE", this.Date);
@@ -85,6 +86,43 @@ namespace CSharp_Assignment4
             con.Close();
                 return temp;
                // return Products;
+        }
+        public void updateProduct(Product updatedProduct)
+        {
+            try
+            {
+                string connection = @"Data Source=DESKTOP-O813SED\SQLEXPRESS;Initial Catalog=CCONNECTION;Integrated Security=True";
+
+                SqlConnection con = new SqlConnection(connection);
+                con.Open();
+                string Query = "EXEC sp_UPDATEPRODUCT @ID,@DATE,@INV_NUM,@NAME,@COUNT,@PRICE,@AVAIL,@PLASTIC";
+                SqlCommand cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@ID", updatedProduct.Number);
+                cmd.Parameters.AddWithValue("@DATE", updatedProduct.Date);
+                cmd.Parameters.AddWithValue("@INV_NUM", updatedProduct.Inventory_Number);
+                cmd.Parameters.AddWithValue("@NAME", updatedProduct.Object_Name);
+                cmd.Parameters.AddWithValue("@COUNT", updatedProduct.Count);
+                cmd.Parameters.AddWithValue("@PRICE", updatedProduct.Price);
+                cmd.Parameters.Add("@AVAIL", System.Data.SqlDbType.VarChar).Value = updatedProduct.isAvailable;//value
+                cmd.Parameters.Add("@PLASTIC", System.Data.SqlDbType.VarChar).Value = updatedProduct.rad_Plastic;
+                cmd.ExecuteNonQuery(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
+        public static void deleteProduct(int number)
+        {
+            string connection = @"Data Source=DESKTOP-O813SED\SQLEXPRESS;Initial Catalog=CCONNECTION;Integrated Security=True";
+
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            string Query = "EXEC spDELETEPRODUCT @ID";
+            SqlCommand cmd = new SqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@ID", number);
+            cmd.ExecuteNonQuery();
         }
 
     }

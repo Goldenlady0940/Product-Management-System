@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CSharp_Assignment4
 {
-    public partial class ProductCard : UserControl
+    public partial class UCProductCard : UserControl
     {
         private string _Product_Name;
         private int _Product_Inventory;
@@ -38,7 +38,7 @@ namespace CSharp_Assignment4
             get { return _Count; }
             set { _Count = value; lbl_Count.Text = value.ToString(); }
         }
-        public ProductCard()
+        public UCProductCard()
         {
             InitializeComponent();//defined in the designer class
         }

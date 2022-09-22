@@ -11,26 +11,14 @@ using System.Data.SqlClient;
 
 namespace CSharp_Assignment4
 {
-    public partial class Search : Form
+    public partial class DetailPage : Form
     {
-        public Search()
+        public DetailPage()
         {
             InitializeComponent();
         }
 
-        private void lbl_Search_Click(object sender, EventArgs e)
-        {
-            var Products = Product.findOne(txt_Search.Text);
-            if (Products == null)
-            {
-                MessageBox.Show("not found");
-            }
-            else
-            {
-                MessageBox.Show("Found");
-                Product.findOne(Products.Object_Name);
-            }
-        }
+        
 
         private void Search_Load(object sender, EventArgs e)
         {
@@ -38,7 +26,7 @@ namespace CSharp_Assignment4
             flowLayoutPanel1.Controls.Clear();
             foreach (var item in Product.GetAllProduct())
             {
-                ProductCard pro = new ProductCard();
+                UCProductCard pro = new UCProductCard();
                 pro.Product_Name = item.Object_Name;
                 pro.Product_Inventory = item.Inventory_Number;
                 pro.Count = item.Count;

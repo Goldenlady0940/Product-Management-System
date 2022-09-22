@@ -32,14 +32,18 @@ namespace CSharp_Assignment4
             form1.Show();
         }
 
-        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DisplayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-                Search search = new Search();
-                search.MdiParent = this;
-                search.Show();
-                
+            if (this.ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+            DetailPage disp = new DetailPage();
+            disp.MdiParent = this;
+            disp.Show();
+
         }
+
     }
 }
 /*

@@ -21,7 +21,7 @@ namespace CSharp_Assignment4
         {
             if (txt_User_Name.Text == "Admin" && txt_Password.Text == "Admin")
             {
-                Form1 screen = new Form1(/*txt_User_Name.Text*/);
+                MainWindows screen = new MainWindows(/*txt_User_Name.Text*/);
                 screen.Show();
                 this.Hide();
             }
