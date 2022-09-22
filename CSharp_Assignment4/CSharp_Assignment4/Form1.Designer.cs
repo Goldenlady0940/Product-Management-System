@@ -53,6 +53,7 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.txt_Search = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.group_Quality.SuspendLayout();
@@ -271,11 +272,22 @@
             this.txt_Search.Size = new System.Drawing.Size(175, 20);
             this.txt_Search.TabIndex = 24;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic);
+            this.label2.Location = new System.Drawing.Point(867, 355);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 15);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "(Object Name)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 522);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_Delete);
@@ -337,6 +349,7 @@
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Label label2;
     }
 }
 
