@@ -10,10 +10,6 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
 
-//using lab4_windows_gui.Model;
-//@ to ignor escae character
-//$ 
-
 namespace CSharp_Assignment4
 {
     public partial class Form1 : Form
